@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% if page.title %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="og:title" content="{{ page.title }}">
+  {% else %}
+    <title>{{ site.title }}</title>
+    <meta name="og:title" content="{{ site.title }}">
+  {% endif %}
+  <meta name="description" content="{{ site.tagline }}">
+  {% if page.author %}
+    <meta name="author" content="{{ page.author }}">
+  {% endif %}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="/assets/leaflet/leaflet.css" />
+  <script src="{{ "/assets/leaflet/leaflet.js" | relative_url }}"></script>
+  <script src="{{ "/assets/cities.js" | relative_url }}"></script>
+  {%- feed_meta -%}
+</head>

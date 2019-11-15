@@ -1,0 +1,36 @@
+<header class="site-header" role="banner">
+  <div id="header-map"></div>
+  <div class="overmap">
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}"><span class="id">iD</span><span class="blog">blog</span></a>
+    <div class="spacer"></div>
+    <a href="{{ "/feed.xml" | relative_url }}" title="RSS Feed" class="icon tab">{%- include icon-rss.svg -%}</a>
+    <a href="https://github.com/{{ site.github }}" title="iD Repository on GitHub" class="icon tab">{%- include icon-github.svg -%}</a>
+    <a id="city-box" href="#" title="Edit OpenStreetMap here with iD" target="_blank" class="tab"><span id="city-name"></span><br/><span class="link">Map with iD →</span></a>
+  </div>
+  </div>
+  <script type="text/javascript">
+    var countryKeys = Object.keys(cities);
+    var countryName = countryKeys[countryKeys.length * Math.random() << 0];
+    var cities = cities[countryName];
+    var cityKeys = Object.keys(cities);
+    var cityName = cityKeys[cityKeys.length * Math.random() << 0];
+    var coords = cities[cityName];
+    document.getElementById('city-name').innerHTML = cityName + ', ' + countryName;
+    document.getElementById('city-box').setAttribute('href', 'https://openstreetmap.org/edit?editor=id#map=14/' + coords[0] + '/' + coords[1]);
+    console.log(cityName);
+    var headerMap = L.map('header-map', {
+        zoomControl: false,
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        attributionControl: false
+    }).setView(coords, 14);
+    L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}{r}', {
+      maxZoom: 22,
+      id: 'imagery'
+    }).addTo(headerMap);
+  </script>
+</header>

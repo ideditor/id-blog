@@ -1,0 +1,29 @@
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <a class="post-link" href="{{ page.url | relative_url }}">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    </a>
+    <p class="post-meta"><time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.author -%}
+        ✦
+        {% assign author = site.authors | where: "name", page.author | first %}
+        {% if author.twitter %}
+          <a href="https://twitter.com/{{ author.twitter }}">
+        {% endif %}
+        <span class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+        {% if author.twitter %}
+          </a>
+        {% endif %}
+      {%- endif -%}</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

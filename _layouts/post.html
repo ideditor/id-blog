@@ -1,0 +1,10 @@
+---
+layout: default
+---
+{%- include article.html -%}
+{%- if page.previous -%}
+<a href="{{ page.previous.url | relative_url }}" class="previous-post">< Prior Post</a>
+{%- endif -%}
+{%- if page.next -%}
+<a href="{{ page.next.url | relative_url }}" class="next-post">Next Post ></a>
+{%- endif -%}

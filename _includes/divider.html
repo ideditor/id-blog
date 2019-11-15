@@ -1,0 +1,20 @@
+<div class="article-divider">
+  <img id="{{page.id}}-divider-icon-0"/>
+  <img id="{{page.id}}-divider-icon-1"/>
+  <img id="{{page.id}}-divider-icon-2"/>
+  <script type="text/javascript">
+    var fileCount = 117;
+    var nums = [];
+    while (nums.length < 3) {
+        var randNum = Math.floor(Math.random() * fileCount);
+        if (nums.indexOf(randNum) === -1) {
+            nums.push(randNum);
+        }
+    }
+    nums.forEach(function(num, i) {
+        var imgID = '{{page.id}}-divider-icon-' + i;
+        var src = '{{ "/assets/id-icons/" | relative_url }}' + num + '.svg';
+        document.getElementById(imgID).src = src;
+    });
+  </script>
+</div>
