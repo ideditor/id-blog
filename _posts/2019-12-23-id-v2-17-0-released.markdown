@@ -1,0 +1,126 @@
+---
+layout: post
+title:  "iD v2.17.0 released"
+date:   2019-12-30 15:00:00 -0500
+author: Quincy Morgan
+categories: releases
+---
+Happy holidays! Version [2.17.0](https://github.com/openstreetmap/iD/releases/tag/v2.17.0) of the iD Editor was released on December 23rd. This post covers a sampling of new features—see the [changelog](https://github.com/openstreetmap/iD/blob/master/CHANGELOG.md#2170) for full details.
+
+#### Bridge and Tunnel Fixes
+
+![demo of adding bridge to road crossing river with quick fix iD 2.17.0](/assets/content/v2-17-0/add-bridge-demo.gif){: .bordered}
+{: .full-width}
+
+iD has flagged missing bridges and tunnels since version 2.14.0, but adding a structure to a road, railway, or waterway can be cumbersome.
+
+You can now instantly add a bridge or tunnel to crossing ways with a single click. If needed, you can then drag the structure's endpoints to set its length. This makes it easier for beginners and experts alike to fix crossings quickly and accurately
+
+This feature was originally [submitted by Katarzyna Król](https://github.com/openstreetmap/iD/pull/7055).
+
+#### Low-Zoom Inspection
+
+![demo of viewing features, editing fields, and inspecting relations while zoomed out past the editable zoom level in iD 2.17.0](/assets/content/v2-17-0/low-zoom-edit-demo.gif){: .bordered}
+{: .full-width}
+
+Previously, iD hid all data when zooming out past level 16. But some map features are huge! iD now maintains your selection at any zoom level, making it easy to see the big picture. Press the <kbd>Z</kbd> shortcut to zoom to the combined extent of all selected features.
+
+While geometry editing is disabled at low zooms, you can still edit fields and navigate relations. Note that distant relation members are not loaded by default but you can get them manually.
+
+#### Access Aisles
+
+![screenshot of iD 2.17.0 with access aisles mapped in parking lot](/assets/content/v2-17-0/access-aisle-screenshot.png){: .bordered}
+{: .full-width}
+
+The [`footway=access_aisle`](https://wiki.openstreetmap.org/wiki/Proposed_features/access_aisle) tag proposed by [Glassman](https://www.openstreetmap.org/user/Glassman) was recently approved by wiki voters and is now supported by iD. Use the Access Aisle preset in parking lots to map zones designated for pedestrians, wheelchair users, and accessible van loading. These aisles are required by law in the United States, for example, and can be found in various forms throughout the world.
+
+By connecting parking aisles to paths with these, we further close the gap between the vehicular and pedestrian sides of the routing network. Imagine a router that first gives driving directions to a parking lot and then continues with walking directions across a campus, park, mall, or train station.
+
+#### New Icons
+
+![billboard](/assets/content/v2-17-0/icons/billboard.png)
+{: .preset-row}
+![blacksmith](/assets/content/v2-17-0/icons/blacksmith.png)
+{: .preset-row}
+![bunker](/assets/content/v2-17-0/icons/bunker.png)
+{: .preset-row}
+![channel buoy](/assets/content/v2-17-0/icons/buoy.png)
+{: .preset-row}
+![communication tower](/assets/content/v2-17-0/icons/communication-tower.png)
+{: .preset-row}
+![embassy](/assets/content/v2-17-0/icons/embassy.png)
+{: .preset-row}
+![fish pass](/assets/content/v2-17-0/icons/fish-pass.png)
+{: .preset-row}
+![hostel](/assets/content/v2-17-0/icons/hostel.png)
+{: .preset-row}
+![park](/assets/content/v2-17-0/icons/park.png)
+{: .preset-row}
+![parking lot](/assets/content/v2-17-0/icons/parking.png)
+{: .preset-row}
+![pier](/assets/content/v2-17-0/icons/pier.png)
+{: .preset-row}
+![scrap yard](/assets/content/v2-17-0/icons/scrap-yard.png)
+{: .preset-row}
+![street lamp](/assets/content/v2-17-0/icons/street-lamp.png)
+{: .preset-row}
+![tree row](/assets/content/v2-17-0/icons/tree-row.png)
+{: .preset-row}
+![turnstile](/assets/content/v2-17-0/icons/turnstile.png)
+{: .preset-row}
+![underground power cable](/assets/content/v2-17-0/icons/power-cable.png)
+{: .preset-row}
+![water tower](/assets/content/v2-17-0/icons/water-tower.png)
+{: .preset-row}
+![wilderness hut](/assets/content/v2-17-0/icons/wilderness-hut.png)
+{: .preset-row.last}
+
+Dozens of feature types have been updated with custom-drawn icons—just a few are previewed here. Great icons help mappers decipher unknown feature types and distinguish between similar ones, particularly across languages and cultures.
+
+Most of the new icons are in the public domain. You can download them or contribute your own at iD's icon project, [Temaki](https://github.com/ideditor/temaki).
+
+#### Offline Country Coding
+
+iD often needs to know what country a feature is located in. Address formats, phone number formats, most-spoken languages, speed limit units, and brand availability are all country-dependent in iD.
+
+Before, iD would have to send a request to a geocoding server to get this data. Now, country codes are coded locally in your browser. This makes some UI components more responsive and reliable, especially when running iD offline or with a slow internet connection.
+
+This functionality is enabled by our new [country-coder](https://github.com/ideditor/country-coder) package which you can use in your own JavaScript apps.
+
+#### Privacy Policy
+
+![screenshot of iD 2.17.0 with updated privacy policy notice and link](/assets/content/v2-17-0/privacy-policy-splash.png){: .bordered}
+{: .full-width}
+
+iD now has its own [privacy policy](https://github.com/openstreetmap/iD/blob/master/PRIVACY.md). Mappers will see a new message on iD's splash screen to notify them of the policy and anytime it changes. This policy is separate from [OpenStreetMap's privacy policy](https://wiki.osmfoundation.org/wiki/Privacy_Policy).
+
+An option to disable icons served from third-party sites like Wikimedia Commons, Facebook, Twitter, and Gravatar has also been added. While icons from these sites are helpful for differentiating brands and user accounts, some mappers may prefer not to load them.
+
+#### Removed Features
+
+The Maxar Standard and Maxar Premium imagery layers have been removed from iD and all other OpenStreetMap editors due to an [announced suspension of service](https://www.openstreetmap.org/user/@kevin_bullock/diary/391652).
+
+Due to ambiguity issues raised by mappers, iD no longer offers to upgrade the tags `crossing=zebra`, `amenity=social_club`, or `leisure=social_club`. Since the meanings of these tags vary across the OpenStreetMap database, iD cannot be sure that upgrading them will always retain accurate information.
+
+#### Credits
+
+As always, thank you to all those people who submit code, translate, report issues, beta test, and map with iD ♥️. Our community drives the project. [Get involved!](https://github.com/openstreetmap/iD/blob/master/CONTRIBUTING.md)
+
+iD v2.17.0 includes pull requests from ten outside contributors: [@51114u9], [@CarycaKatarzyna], [@hackily], [@hikemaniac], [@iriman], [@koaber], [@mbrickn], [@scaidermern], [@stragu], and [@ToastHawaii].
+
+[@CarycaKatarzyna]: https://github.com/CarycaKatarzyna
+[@hackily]: https://github.com/hackily
+[@iriman]: https://github.com/iriman
+[@koaber]: https://github.com/koaber
+[@51114u9]: https://github.com/51114u9
+[@mbrickn]: https://github.com/mbrickn
+[@hikemaniac]: https://github.com/hikemaniac
+[@scaidermern]: https://github.com/scaidermern
+[@ToastHawaii]: https://github.com/ToastHawaii
+[@stragu]: https://github.com/stragu
+
+#### Looking Ahead
+
+Entering 2020, we're shifting our focus toward shipping iD v3. This major release will bring interface changes that speed up repetitive mapping tasks and surface advanced tools. For more info, [watch our talk](https://2019.stateofthemap.us/program/sat/id-v3.html) from State of the Map US 2019.
+
+Since v3 will affect existing workflows, we're planning a relatively long public testing, feedback, and release process. Stay tuned for more details!
