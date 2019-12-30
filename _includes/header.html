@@ -18,15 +18,18 @@
     var cityKeys = Object.keys(cities);
     var cityName = cityKeys[cityKeys.length * Math.random() << 0];
     var coords = cities[cityName];
+    var zoomLevel = 14;
     document.getElementById('city-name').innerHTML = cityName + ', ' + countryName;
-    document.getElementById('city-box').setAttribute('href', 'https://openstreetmap.org/edit?editor=id#map=14/' + coords[0] + '/' + coords[1]);
-    console.log(cityName);
+    document.getElementById('city-box').setAttribute('href', 'https://openstreetmap.org/edit?editor=id#map=' + zoomLevel + '/' + coords[0] + '/' + coords[1]);
     var headerMap = L.map('header-map', {
         zoomControl: false,
         scrollWheelZoom: false,
         doubleClickZoom: false,
         boxZoom: false,
-        attributionControl: false
+        touchZoom: false,
+        minZoom: zoomLevel,
+        maxZoom: zoomLevel,
+        attributionControl: false // attribution is in site footer
     }).setView(coords, 14);
     L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}{r}', {
       maxZoom: 22,
