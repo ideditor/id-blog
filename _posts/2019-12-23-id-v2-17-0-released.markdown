@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "iD v2.17.0 released"
+description: Featuring bridge and tunnel quick fixes, low-zoom inspection, access aisles, a privacy policy, and more…
+image: /assets/content/v2-17-0/add-bridge-demo.gif
 date:   2019-12-30 15:00:00 -0500
 author: Quincy Morgan
 categories: releases
