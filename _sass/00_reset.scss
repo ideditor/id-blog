@@ -54,6 +54,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
+figcaption,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
@@ -89,6 +90,7 @@ figure > img {
 
 figcaption {
   font-size: $small-font-size;
+  color: $grey-color-dark;
 }
 
 

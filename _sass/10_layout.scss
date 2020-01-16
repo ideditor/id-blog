@@ -217,6 +217,10 @@
       max-width: 600px;
   }
 
+  iframe.full-width {
+      width: 100%;
+  }
+
   h2, h3, h4, h5, h6 {
       color: $grey-color-dark;
       margin-bottom: 10px;
@@ -254,7 +258,7 @@
     color: $grey-color-dark;
   }
 
-  img.bordered {
+  .bordered {
       border: 1px rgba(0,0,0,0.1) solid;
   }
   .preset-row {

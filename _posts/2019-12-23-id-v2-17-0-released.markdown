@@ -5,6 +5,7 @@ description: Featuring bridge and tunnel quick fixes, low-zoom inspection, acces
 image: /assets/content/v2-17-0/add-bridge-demo.gif
 date:   2019-12-30 15:00:00 -0500
 author: Quincy Morgan
+organization: The iD Team
 categories: releases
 ---
 Happy holidays! Version [2.17.0](https://github.com/openstreetmap/iD/releases/tag/v2.17.0) of the iD Editor was released on December 23rd. This post covers a sampling of new features—see the [changelog](https://github.com/openstreetmap/iD/blob/master/CHANGELOG.md#2170) for full details.

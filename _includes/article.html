@@ -14,8 +14,17 @@
         {% if author.twitter %}
           <a href="https://twitter.com/{{ author.twitter }}">
         {% endif %}
-        <span class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-        {% if author.twitter %}
+        <span class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>{%
+        if author.twitter %}</a>{% endif %}
+      {%- endif -%}
+      {%- if page.organization -%}
+        <span> @ </span>
+        {% assign org = site.organizations | where: "name", page.organization | first %}
+        {% if org.url %}
+          <a href="{{ org.url }}">
+        {% endif %}
+        <span class="post-org">{{ page.organization }}</span>
+        {% if org.url %}
           </a>
         {% endif %}
       {%- endif -%}</p>

@@ -33,6 +33,16 @@ authors:
   - 0:
     name: Quincy Morgan
     twitter: quincylvania
+  - 1:
+    name: Chris Beddow
+    twitter: cbed32
+
+organizations:
+  - 0:
+    name: The iD Team
+  - 1:
+    name: Mapillary
+    url: "https://www.mapillary.com/"
 
 # Build settings
 plugins:

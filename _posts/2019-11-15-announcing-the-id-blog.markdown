@@ -3,6 +3,7 @@ layout: post
 title:  "Announcing the iD Blog"
 date:   2019-11-15 18:15:00 -0500
 author: Quincy Morgan
+organization: The iD Team
 categories: announcements
 ---
 "What's up with iD?"
