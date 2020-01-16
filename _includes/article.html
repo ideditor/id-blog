@@ -9,13 +9,9 @@
         {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
-        ✦
+        <span> ✦ </span>
         {% assign author = site.authors | where: "name", page.author | first %}
-        {% if author.twitter %}
-          <a href="https://twitter.com/{{ author.twitter }}">
-        {% endif %}
-        <span class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>{%
-        if author.twitter %}</a>{% endif %}
+        {% if author.twitter %}<a href="https://twitter.com/{{ author.twitter }}">{% endif %}<span class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>{% if author.twitter %}</a>{% endif %}
       {%- endif -%}
       {%- if page.organization -%}
         <span> @ </span>
