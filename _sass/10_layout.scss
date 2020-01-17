@@ -201,7 +201,6 @@
 
 .post-title {
   @include relative-font-size(1.75);
-  letter-spacing: -1px;
   line-height: 1;
   font-weight: bold;
 }
