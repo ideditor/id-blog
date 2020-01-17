@@ -13,9 +13,9 @@ Mapillary has long been integrated into OpenStreetMap editors, and we are evalua
 <iframe width="640" height="350" class="full-width bordered" src="https://embed-v1.mapillary.com/embed?version=1&filter=%5B%22all%22,%5B%22all%22,%5B%22%3E=%22,%22capturedAt%22,1575158400000%5D%5D,%5B%22==%22,%22pano%22,true%5D%5D&map_filter=%5B%22all%22,%5B%22all%22,%5B%22%3E=%22,%22captured_at%22,1575158400000%5D%5D,%5B%22==%22,%22pano%22,1%5D%5D&map_style=Mapillary streets&image_key=mMEJIfx9LWrBjQgzvG_PCg&x=0.48764933183654685&y=0.595925728396846&client_id=UTZhSnNFdGpxSEFFREUwb01GYzlXZzoyNGFlY2QwMmIwZTU2ZDVk&style=photo" frameborder="0"></iframe>
 <figcaption>Map features extracted from a 360-degree panorama in Brazil</figcaption>
 
-The OpenStreetMap iD editor has been evolving at a fast pace in recent years, thanks to a strong user base, dedicated developers, and integrations from multiple partners. At State of the Map US 2019 in Minneapolis, the iD developers gave a preview of version 3 which is due to release sometime in 2020.
+The OpenStreetMap iD editor has been evolving at a fast pace in recent years, thanks to a strong user base, dedicated developers, and integrations from multiple partners. At State of the Map US 2019 in Minneapolis, the iD developers [gave a preview](https://www.youtube.com/watch?v=cnML0w0qFCw&list=PLqjPa29lMiE3IqlKQlEwGlodMfJJHz-YV) of version 3 which is due to release sometime in 2020.
 
-In the meantime, the user interface has already started changing, and late in 2019 this included the addition of a new Mapillary data layer called Map Features. This layer includes multiple classes of point data extracted from imagery uploaded to Mapillary. While a complete taxonomy of available point data is listed in our API documentation,  we have only included such features as benches, street lights, and cross walks, which have a clear one to one match in the OSM tagging schema.
+In the meantime, the user interface has already started changing, and late in 2019 this included the addition of a new Mapillary data layer called Map Features. This layer includes multiple classes of point data extracted from imagery uploaded to Mapillary. While a complete taxonomy of available point data is [listed in our API documentation](https://www.mapillary.com/developer/api-documentation/#points),  we have only included such features as benches, street lights, and cross walks, which have a clear one to one match in the OSM tagging schema.
 
 ![Mapillary map features and corresponding icons](/assets/content/2020-01-15/01.png){: .bordered}
 {: .full-width}
@@ -63,10 +63,10 @@ We may correctly recognize a fire hydrant, but due to GPS issues it could be off
 ![Mapillary verifier tool](/assets/content/2020-01-15/07.png){: .bordered}
 {: .full-width}
 
-The classification accuracy is greatly improved if you verify the data beforehand using the Mapillary verifier tool. The tool allows you and your collaborators to verify the classifications in the images quickly and efficiently, then updates the map data to remove false positives. This can save you a great amount of time once you actually start adding the data to OpenStreetMap. Make sure to ask about this when you request data, and we can include links to verification projects for you. You can also set up a verification project on your own, prior to a data request.
+The classification accuracy is greatly improved if you verify the data beforehand using the [Mapillary verifier tool](https://help.mapillary.com/hc/en-us/articles/115001964171-Verifier-tool). The tool allows you and your collaborators to verify the classifications in the images quickly and efficiently, then updates the map data to remove false positives. This can save you a great amount of time once you actually start adding the data to OpenStreetMap. Make sure to ask about this when you request data, and we can include links to verification projects for you. You can also [set up a verification project on your own](https://help.mapillary.com/hc/en-us/articles/360025532692-Verification-projects), prior to a data request.
 
 Try to give good details in the data request, as you’ll be sending this to me so I can better understand what impact the data has and how to make it more valuable in the future. Once you’ve submitted the request, you’ll get a message saying it’s approved and you’re ready to start mapping!
 
-Questions? Feedback? Ideas? Drop us a message!
+Questions? Feedback? Ideas? [Drop us a message](mailto:osm@mapillary.com)!
 
 / Chris
