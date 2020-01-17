@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "iD v2.17.1 released"
+description: Patch featuring drag-and-drop field values, new presets, bug fixes, and other niceties
+image: /assets/content/v2-17-1/solar-farm.png
+date:   2020-01-17 09:30:00 -0500
+author: Quincy Morgan
+organization: The iD Team
+categories: releases
+---
+Joyous January! iD version [2.17.1](https://github.com/openstreetmap/iD/releases/tag/v2.17.1) is now [live for editing](https://openstreetmap.org/edit?editor=id). This patch focuses on bug fixes and little niceties but also brings a few new tricks. See the [changelog](https://github.com/openstreetmap/iD/blob/master/CHANGELOG.md#2171) for details.
+
+#### Reordering Field Values
+
+![demo of reordering motorway link destination values in the iD 2.17.1 inspector](/assets/content/v2-17-1/reorder-semicombo-demo.gif){: .bordered}
+{: .full-width}
+
+Many fields take multiple, ordered values. For example, destinations on highway exits should typically be listed the way they appear on signage. You can now reorder these values via drag-and-drop. Simple!
+
+This feature was originally [submitted by Arjun Gupta](https://github.com/openstreetmap/iD/pull/7024).
+
+#### Power Plant Feature Types
+
+![inspecting a solar farm feature in iD 2.17.1](/assets/content/v2-17-1/solar-farm.png){: .bordered}
+{: .full-width}
+
+Different types of power stations are now easier to add, including solar and wind farms, nuclear and hydroelectric plants, and fossil fuel-burning facilities. Find out where your local power comes from and get it on the map 🔌
+
+#### New Icons
+
+![islet](/assets/content/v2-17-1/icons/islet.png)
+{: .preset-row}
+![island](/assets/content/v2-17-1/icons/island.png)
+{: .preset-row}
+![fireworks store](/assets/content/v2-17-1/icons/fireworks-store.png)
+{: .preset-row}
+![j-bar lift](/assets/content/v2-17-1/icons/j-bar-lift.png)
+{: .preset-row}
+![tailor](/assets/content/v2-17-1/icons/tailor.png)
+{: .preset-row}
+![water well](/assets/content/v2-17-1/icons/water-well.png)
+{: .preset-row.last}
+
+Various feature types sport new icons as part of our continued effort to keep features easily distinguishable. Also check out [icons we added in v2.17.0](/2019/12/30/id-v2-17-0-released#new-icons).
+
+You can download or contribute to iD's public domain icons at the [Temaki](https://github.com/ideditor/temaki) project.
+
+
+#### Note to Developers
+
+We've dropped support for Node 8, which [reached end-of-life](https://github.com/nodejs/Release#end-of-life-releases) on December 31st, 2019. Node 10 or higher is now required when building iD.
+
+#### Credits
+
+As always, a heartfelt thank you to everyone who makes the iD community strong. [Get involved!](https://github.com/openstreetmap/iD/blob/master/CONTRIBUTING.md)
+
+iD v2.17.1 includes pull requests from six outside contributors: [@andrewharvey], [@hikemaniac], [@mapmeld], [@sguinetti], [@TAQ2], [@tastrax].
+
+[@andrewharvey]: https://github.com/andrewharvey
+[@hikemaniac]: https://github.com/hikemaniac
+[@mapmeld]: https://github.com/mapmeld
+[@sguinetti]: https://github.com/sguinetti
+[@TAQ2]: https://github.com/TAQ2
+[@tastrax]: https://github.com/tastrax
