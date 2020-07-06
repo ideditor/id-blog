@@ -8,7 +8,7 @@ author: Quincy Morgan
 organization: The iD Team
 categories: releases
 ---
-Joyous January! iD version [2.17.1](https://github.com/openstreetmap/iD/releases/tag/v2.17.1) is now [live for editing](https://openstreetmap.org/edit?editor=id). This patch focuses on bug fixes and little niceties but also brings a few new tricks. See the [changelog](https://github.com/openstreetmap/iD/blob/master/CHANGELOG.md#2171) for details.
+Joyous January! iD version [2.17.1](https://github.com/openstreetmap/iD/releases/tag/v2.17.1) is now [live for editing](https://openstreetmap.org/edit?editor=id). This patch focuses on bug fixes and little niceties but also brings a few new tricks. See the [changelog](https://github.com/openstreetmap/iD/blob/release/CHANGELOG.md#2171) for details.
 
 #### Reordering Field Values
 
@@ -52,7 +52,7 @@ We've dropped support for Node 8, which [reached end-of-life](https://github.com
 
 #### Credits
 
-As always, a heartfelt thank you to everyone who makes the iD community strong. [Get involved!](https://github.com/openstreetmap/iD/blob/master/CONTRIBUTING.md)
+As always, a heartfelt thank you to everyone who makes the iD community strong. [Get involved!](https://github.com/openstreetmap/iD/blob/develop/CONTRIBUTING.md)
 
 iD v2.17.1 includes pull requests from six outside contributors: [@andrewharvey], [@hikemaniac], [@mapmeld], [@sguinetti], [@TAQ2], [@tastrax].
 

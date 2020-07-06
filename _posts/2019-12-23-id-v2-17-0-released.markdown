@@ -8,7 +8,7 @@ author: Quincy Morgan
 organization: The iD Team
 categories: releases
 ---
-Happy holidays! Version [2.17.0](https://github.com/openstreetmap/iD/releases/tag/v2.17.0) of the iD Editor was released on December 23rd. This post covers a sampling of new features—see the [changelog](https://github.com/openstreetmap/iD/blob/master/CHANGELOG.md#2170) for full details.
+Happy holidays! Version [2.17.0](https://github.com/openstreetmap/iD/releases/tag/v2.17.0) of the iD Editor was released on December 23rd. This post covers a sampling of new features—see the [changelog](https://github.com/openstreetmap/iD/blob/release/CHANGELOG.md#2170) for full details.
 
 #### Bridge and Tunnel Fixes
 
@@ -95,7 +95,7 @@ This functionality is enabled by our new [country-coder](https://github.com/ided
 ![screenshot of iD 2.17.0 with updated privacy policy notice and link](/assets/content/v2-17-0/privacy-policy-splash.png){: .bordered}
 {: .full-width}
 
-iD now has its own [privacy policy](https://github.com/openstreetmap/iD/blob/master/PRIVACY.md). Mappers will see a new message on iD's splash screen to notify them of the policy and anytime it changes. This policy is separate from [OpenStreetMap's privacy policy](https://wiki.osmfoundation.org/wiki/Privacy_Policy).
+iD now has its own [privacy policy](https://github.com/openstreetmap/iD/blob/release/PRIVACY.md). Mappers will see a new message on iD's splash screen to notify them of the policy and anytime it changes. This policy is separate from [OpenStreetMap's privacy policy](https://wiki.osmfoundation.org/wiki/Privacy_Policy).
 
 An option to disable icons served from third-party sites like Wikimedia Commons, Facebook, Twitter, and Gravatar has also been added. While icons from these sites are helpful for differentiating brands and user accounts, some mappers may prefer not to load them.
 
@@ -107,7 +107,7 @@ Due to ambiguity issues raised by mappers, iD no longer offers to upgrade the ta
 
 #### Credits
 
-As always, thank you to all those people who submit code, translate, report issues, beta test, and map with iD ♥️. Our community drives the project. [Get involved!](https://github.com/openstreetmap/iD/blob/master/CONTRIBUTING.md)
+As always, thank you to all those people who submit code, translate, report issues, beta test, and map with iD ♥️. Our community drives the project. [Get involved!](https://github.com/openstreetmap/iD/blob/develop/CONTRIBUTING.md)
 
 iD v2.17.0 includes pull requests from ten outside contributors: [@51114u9], [@CarycaKatarzyna], [@hackily], [@hikemaniac], [@iriman], [@koaber], [@mbrickn], [@scaidermern], [@stragu], and [@ToastHawaii].
 
